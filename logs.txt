@@ -1,0 +1,11 @@
+{"level":"info","message":"/api/users/signup - {\"name\":\"aviansh\",\"email\":\"aviansh@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"aviansh\",\"email\":\"aviansh@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"aviansh\",\"email\":\"aviansh@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"avinash\",\"email\":\"avinash@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"avinash\",\"email\":\"avinash@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"avinash\",\"email\":\"avinash@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"avinash\",\"email\":\"avinash@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"anamika\",\"email\":\"anamika@gmail.com\",\"age\":30,\"password\":\"anamika\"}"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"anamika\",\"email\":\"anamika@gmail.com\",\"age\":30,\"password\":\"anamika\"}"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"anamika\",\"email\":\"anamika@gmail.com\",\"mobile\":\"9038950833\",\"age\":30,\"password\":\"anamika\"}"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"avinash\",\"email\":\"avinash@gmail.com\",\"mobile\":\"9038950831\",\"age\":30,\"password\":\"avinash\"}"}

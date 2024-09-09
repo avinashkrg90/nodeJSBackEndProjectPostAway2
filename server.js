@@ -2,6 +2,12 @@ import express from 'express'
 import dotenv from 'dotenv'
 dotenv.config();
 const app = express();
+import { connectUsingMongoose } from './src/config/mongoose.js';
+import bodyParser from 'body-parser';
+import loggerMiddleware from './src/middlewares/logger.middleware.js';
+
+app.use(bodyParser.json());
+app.use(loggerMiddleware);
 
 import userRouter from './src/features/user/user.routes.js';
 import postRouter from './src/features/post/post.routes.js';
@@ -21,9 +27,15 @@ app.use('/api/likes', likeRouter);
 app.use('/api/friends', friendRouter);
 app.use('/api/otp', otpRouter);
 
+// Middleware to handle 404 requests
+app.use((req, res)=>{
+    res.status(404).send("API not found");
+})
+
 const PORT = process.env.PORT;
 app.listen(PORT, ()=>{
     console.log("server is listening on port " + PORT);
+    connectUsingMongoose();
 })
 
 
