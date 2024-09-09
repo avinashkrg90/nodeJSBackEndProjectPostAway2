@@ -27,6 +27,11 @@ const userSchema = new mongoose.Schema({
             message: "age must be b/w 0 and 100",
         },
     },
+    gender:{
+        type:String,
+        required:true,
+        enum:["male", "female", "others"]
+    },
     password: {
         type: String,
         required: [true, "password is required"]

@@ -1,11 +1,17 @@
-{"level":"info","message":"/api/users/signup - {\"name\":\"aviansh\",\"email\":\"aviansh@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
-{"level":"info","message":"/api/users/signup - {\"name\":\"aviansh\",\"email\":\"aviansh@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
-{"level":"info","message":"/api/users/signup - {\"name\":\"aviansh\",\"email\":\"aviansh@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
-{"level":"info","message":"/api/users/signup - {\"name\":\"avinash\",\"email\":\"avinash@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
-{"level":"info","message":"/api/users/signup - {\"name\":\"avinash\",\"email\":\"avinash@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
-{"level":"info","message":"/api/users/signup - {\"name\":\"avinash\",\"email\":\"avinash@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
-{"level":"info","message":"/api/users/signup - {\"name\":\"avinash\",\"email\":\"avinash@gmail.com\",\"age\":33,\"password\":\"avinash\"}"}
-{"level":"info","message":"/api/users/signup - {\"name\":\"anamika\",\"email\":\"anamika@gmail.com\",\"age\":30,\"password\":\"anamika\"}"}
-{"level":"info","message":"/api/users/signup - {\"name\":\"anamika\",\"email\":\"anamika@gmail.com\",\"age\":30,\"password\":\"anamika\"}"}
-{"level":"info","message":"/api/users/signup - {\"name\":\"anamika\",\"email\":\"anamika@gmail.com\",\"mobile\":\"9038950833\",\"age\":30,\"password\":\"anamika\"}"}
-{"level":"info","message":"/api/users/signup - {\"name\":\"avinash\",\"email\":\"avinash@gmail.com\",\"mobile\":\"9038950831\",\"age\":30,\"password\":\"avinash\"}"}
+{"level":"info","message":"Mon Sep 09 2024 23:11:52 GMT+0530 (India Standard Time) - /api/users/signup - {\"name\":\"Rohit\",\"email\":\"rohit@gmail.com\",\"mobile\":\"9038954531\",\"age\":28,\"password\":\"rohit\"}"}
+{"level":"info","message":"Mon Sep 09 2024 23:12:14 GMT+0530 (India Standard Time) - /api/users/signup - {\"name\":\"Riya\",\"email\":\"riya@gmail.com\",\"mobile\":\"9045954531\",\"age\":25,\"password\":\"riya\"}"}
+{"level":"info","message":"Mon Sep 09 2024 23:15:24 GMT+0530 (India Standard Time) - /api/users/logout - {}"}
+{"level":"info","message":"Mon Sep 09 2024 23:23:13 GMT+0530 (India Standard Time) - /api/users/signup - {\"name\":\"Riya\",\"email\":\"riya@gmail.com\",\"mobile\":\"9045954531\",\"age\":25,\"gender\":\"female\",\"password\":\"riya\"}"}
+{"level":"info","message":"Mon Sep 09 2024 23:23:48 GMT+0530 (India Standard Time) - /api/users/signup - {\"name\":\"Avinash\",\"email\":\"avinash@gmail.com\",\"mobile\":\"9045951231\",\"age\":33,\"gender\":\"male\",\"password\":\"avinash\"}"}
+{"level":"info","message":"Mon Sep 09 2024 23:24:25 GMT+0530 (India Standard Time) - /api/users/signup - {\"name\":\"Anamika\",\"email\":\"anamika@gmail.com\",\"mobile\":\"9045943131\",\"age\":30,\"gender\":\"female\",\"password\":\"anamika\"}"}
+{"level":"info","message":"Mon Sep 09 2024 23:25:03 GMT+0530 (India Standard Time) - /api/users/signup - {\"name\":\"Rohit Gupta\",\"email\":\"rohitgupta@gmail.com\",\"mobile\":\"9045933131\",\"age\":23,\"gender\":\"male\",\"password\":\"rohitgupta\"}"}
+{"level":"info","message":"Mon Sep 09 2024 23:25:16 GMT+0530 (India Standard Time) - /api/users/logout - {}"}
+{"level":"info","message":"Mon Sep 09 2024 23:42:50 GMT+0530 (India Standard Time) - /api/users/get-details/66df362cb9b5986c039b8b26 - {}"}
+{"level":"info","message":"Mon Sep 09 2024 23:44:12 GMT+0530 (India Standard Time) - /api/users/get-details/66df362cb9b5986c039b8b26 - {}"}
+{"level":"info","message":"Mon Sep 09 2024 23:45:50 GMT+0530 (India Standard Time) - /api/users/get-details/66df362cb9b5986c039b8b26 - {}"}
+{"level":"info","message":"Mon Sep 09 2024 23:46:11 GMT+0530 (India Standard Time) - /api/users/get-details/66df362cb9b5986c039b8b26 - {}"}
+{"level":"info","message":"Mon Sep 09 2024 23:49:14 GMT+0530 (India Standard Time) - /api/users/get-details/66df362cb9b5986c039b8b26 - {}"}
+{"level":"info","message":"Mon Sep 09 2024 23:53:25 GMT+0530 (India Standard Time) - /api/users/get-details/66df362cb9b5986c039b8b26 - {}"}
+{"level":"info","message":"Mon Sep 09 2024 23:55:12 GMT+0530 (India Standard Time) - /api/users/get-details/66df362cb9b5986c039b8b26 - {}"}
+{"level":"info","message":"Mon Sep 09 2024 23:57:47 GMT+0530 (India Standard Time) - /api/users/get-all-details - {}"}
+{"level":"info","message":"Tue Sep 10 2024 00:08:09 GMT+0530 (India Standard Time) - /api/users/update-details/66df3609b9b5986c039b8b24 - {\"name\":\"Riya Ranveer\",\"age\":24,\"email\":\"riyaranveer@gmail.com\",\"gender\":\"female\"}"}

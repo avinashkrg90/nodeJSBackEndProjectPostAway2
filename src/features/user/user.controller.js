@@ -50,16 +50,46 @@ export default class UserController {
         res.send('user log out from all devices page')
     }
 
-    getUserDetailById = (req, res, next) => {
-        res.send('get user detail by id page')
+    getUserDetailById = async (req, res, next) => {
+        const {userId} = req.params;
+        const resp = await this.userRepository.getUserDetailById(userId);
+        if (resp.success) {
+            res.status(201).json({
+                success: true,
+                msg: "user found",
+                res: resp.res,
+            });
+        } else {
+            next(new customErrorHandler(resp.error.statusCode, resp.error.msg));
+        }
     }
 
-    getAllUserDetail = (req, res, next) => {
-        res.send('get detail of all users')
+    getAllUserDetail = async (req, res, next) => {
+        const resp = await this.userRepository.getAllUserDetail();
+        if (resp.success) {
+            res.status(201).json({
+                success: true,
+                msg: "users found",
+                res: resp.res,
+            });
+        } else {
+            next(new customErrorHandler(resp.error.statusCode, resp.error.msg));
+        }
     }
 
     updateUserDetails = async (req, res, next) => {
-        res.send("update user detail");
+        const {userId} = req.params;
+        const {name, age, gender, email} = req.body;
+        const resp = await this.userRepository.updateUserDetails(userId, name, age, gender, email);
+        if (resp.success) {
+            res.status(201).json({
+                success: true,
+                msg: "user details updated",
+                res: resp.res,
+            });
+        } else {
+            next(new customErrorHandler(resp.error.statusCode, resp.error.msg));
+        }
     }
 
     // updateUserPassword = async (req, res, next) => {

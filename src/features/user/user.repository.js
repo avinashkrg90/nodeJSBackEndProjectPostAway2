@@ -1,4 +1,5 @@
 // import { customErrorHandler } from "../../middlewares/errorHandler.js";
+import mongoose from "mongoose";
 import { compareHashedPassword, hashPassword } from "../../utils/hashPassword.js";
 
 import UserModel from "./user.schema.js";
@@ -44,19 +45,16 @@ export default class UserRepository {
         }
     }
 
-    updateUserPasswordRepo = async (_id, newpassword, next) => {
+    getUserDetailById = async (id) => {
         try {
-            const user = await UserModel.findOne({ _id });
+            const user = await UserModel.findById(id);
             if (!user) {
                 return {
                     success: false,
                     error: { statusCode: 404, msg: "user not found" },
                 };
             } else {
-                const newHashedPassword = await hashPassword(newpassword, next);
-                user.password = newHashedPassword;
-                let updatedUser = await user.save();
-                return { success: true, res: updatedUser };
+                return { success: true, res: user };
             }
         } catch (error) {
             return {
@@ -65,4 +63,69 @@ export default class UserRepository {
             };
         }
     }
+
+    getAllUserDetail = async () => {
+        try {
+            const users = await UserModel.find();
+            if (!users) {
+                return {
+                    success: false,
+                    error: { statusCode: 404, msg: "no user found" },
+                };
+            } else {
+                return { success: true, res: users };
+            }
+        } catch (error) {
+            return {
+                success: false,
+                error: { statusCode: 400, msg: error },
+            };
+        }
+    }
+
+    updateUserDetails = async (id, name, age, gender, email) => {
+        try {
+            const user = await UserModel.findById(id);
+            if (!user) {
+                return {
+                    success: false,
+                    error: { statusCode: 404, msg: "no such user found" },
+                };
+            } else {
+                user.name = name;
+                user.age = age;
+                user.gender = gender;
+                user.email = email;
+                await user.save();
+                return { success: true, res: user };
+            }
+        } catch (error) {
+            return {
+                success: false,
+                error: { statusCode: 400, msg: error },
+            };
+        }
+    }
+
+    // updateUserPasswordRepo = async (_id, newpassword, next) => {
+    //     try {
+    //         const user = await UserModel.findOne({ _id });
+    //         if (!user) {
+    //             return {
+    //                 success: false,
+    //                 error: { statusCode: 404, msg: "user not found" },
+    //             };
+    //         } else {
+    //             const newHashedPassword = await hashPassword(newpassword, next);
+    //             user.password = newHashedPassword;
+    //             let updatedUser = await user.save();
+    //             return { success: true, res: updatedUser };
+    //         }
+    //     } catch (error) {
+    //         return {
+    //             success: false,
+    //             error: { statusCode: 400, msg: error },
+    //         };
+    //     }
+    // }
 }
