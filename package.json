@@ -1,0 +1,21 @@
+{
+  "name": "postaway2",
+  "version": "1.0.0",
+  "description": "this is coding ninjas postAway2 project assignment",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },
+  "author": "Avinash Kumar Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.4"
+  }
+}
