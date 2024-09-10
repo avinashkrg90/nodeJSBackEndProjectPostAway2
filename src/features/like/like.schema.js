@@ -1,20 +1,23 @@
 
 import mongoose from "mongoose";
 
-export const likeSchema = new mongoose.Schema({
+const likeSchema = new mongoose.Schema({
   user:{
     type:mongoose.Schema.Types.ObjectId,
     required:true,
     ref:'User'
   },
-  likeable:{
+  post:{
     type:mongoose.Schema.Types.ObjectId,
     required:true,
-    refPath:'on_model'
+    ref:'Post'
   },
-  on_model:{
-    type:String,
-    required:true,
-    enum:['Post', 'Comment']
+  status:{
+    type:Boolean,
+    default:false
   }
-});
+})
+
+const LikeModel = mongoose.model('Like', likeSchema);
+
+export default LikeModel
