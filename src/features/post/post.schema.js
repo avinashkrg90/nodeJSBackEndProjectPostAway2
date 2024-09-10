@@ -10,3 +10,7 @@ const postSchema = mongoose.Schema({
         ref:'User'
     }
 })
+
+const PostModel = new mongoose.model('Post', postSchema);
+
+export default PostModel

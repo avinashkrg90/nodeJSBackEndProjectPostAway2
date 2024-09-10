@@ -1,30 +1,34 @@
 
 import express from 'express'
+import PostController from './post.controller.js';
+import { auth } from '../../middlewares/jwtAuth.js';
+
+const postController = new PostController();
 
 const router = express.Router();
 
-router.get('/all', (req, res)=>{
-    res.send("retrive all posts for a spectfic user")
+router.get('/all', auth, (req, res, next)=>{
+    postController.getAllPosts(req, res, next);
 })
 
-router.get('/:postId', (req, res)=>{
-    res.send("retrive a post by its Id");
+router.get('/:postId', (req, res, next)=>{
+    postController.getPostById(req, res, next);
 })
 
-router.get('/user/:userId', (req, res)=>{
-    res.send("retrive all posts for a spectfic user")
+router.get('/user/:userId', (req, res, next)=>{
+    postController.getAllPostByUserId(req, res, next);
 })
 
-router.post('/', (req, res)=>{
-    res.send("post creation page")
+router.post('/', auth, (req, res, next)=>{
+    postController.createPost(req, res, next);
 })
 
-router.delete('/:postId', (req, res)=>{
-    res.send("deleting a specfic post by its Id")
+router.delete('/:postId', auth, (req, res, next)=>{
+    postController.deletePost(req, res, next);
 })
 
-router.put('/:postId', (req, res)=>{
-    res.send("updating a specific post")
+router.put('/:postId', auth, (req, res, next)=>{
+    postController.updatePost(req, res, next);
 })
 
 
