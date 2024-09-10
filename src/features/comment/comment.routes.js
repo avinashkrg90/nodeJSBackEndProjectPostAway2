@@ -1,22 +1,26 @@
 
 import express from 'express'
+import CommentController from './comment.controller.js';
+import { auth } from '../../middlewares/jwtAuth.js';
+
+const commentController = new CommentController();
 
 const router = express.Router();
 
-router.get('/:postId', (req, res)=>{
-    res.send("get comments for a specific post")
+router.get('/:postId', (req, res, next)=>{
+    commentController.getComments(req, res, next);
 })
 
-router.post('/:postId', (req, res)=>{
-    res.send("add a comment to a specfic post")
+router.post('/:postId', auth, (req, res, next)=>{
+    commentController.addComment(req, res, next);
 })
 
-router.delete('/:commentId', (req, res)=>{
-    res.send("delete a specific comment")
+router.delete('/:commentId', auth, (req, res, next)=>{
+    commentController.deleteComment(req, res, next);
 })
 
-router.put('/:commentId', (req, res)=>{
-    res.send("update a specific comment")
+router.put('/:commentId', auth, (req, res, next)=>{
+    commentController.updateComment(req, res, next);
 })
 
 export default router;

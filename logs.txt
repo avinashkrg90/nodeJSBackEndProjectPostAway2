@@ -94,3 +94,20 @@
 {"level":"info","message":"Tue Sep 10 2024 22:27:05 GMT+0530 (India Standard Time) - /api/posts/all - {}"}
 {"level":"info","message":"Tue Sep 10 2024 22:27:48 GMT+0530 (India Standard Time) - /api/posts/user/66df3651b9b5986c039b8b28 - {}"}
 {"level":"info","message":"Tue Sep 10 2024 22:28:19 GMT+0530 (India Standard Time) - /api/posts/user/66e00f26f288fbf03664ce9b - {}"}
+{"level":"info","message":"Tue Sep 10 2024 23:37:54 GMT+0530 (India Standard Time) - /api/comments/66e0781526c053eef61dbcc2 - {\"text\":\"wow!... THis is the most beautiful post.\"}"}
+{"level":"info","message":"Tue Sep 10 2024 23:38:40 GMT+0530 (India Standard Time) - /api/comments/66e0781526c053eef61dbcc2 - {\"text\":\"wow!... THis is the most beautiful post.\"}"}
+{"level":"info","message":"Tue Sep 10 2024 23:39:27 GMT+0530 (India Standard Time) - /api/comments/66e0781526c053eef61dbcc2 - {\"text\":\"Hell yeah....Never seen such a thing\"}"}
+{"level":"info","message":"Tue Sep 10 2024 23:40:10 GMT+0530 (India Standard Time) - /api/comments/66e0781526c053eef61dbcc2 - {\"text\":\"I totally agree with you Anamika...\"}"}
+{"level":"info","message":"Tue Sep 10 2024 23:40:34 GMT+0530 (India Standard Time) - /api/comments/66e0781526c053eef61dbcc2 - {\"text\":\"I had experienced the exactly same thing\"}"}
+{"level":"info","message":"Tue Sep 10 2024 23:41:28 GMT+0530 (India Standard Time) - /api/comments/66e0781526c053eef61dbcc2 - {}"}
+{"level":"info","message":"Tue Sep 10 2024 23:43:00 GMT+0530 (India Standard Time) - /api/comments/66e08b821d269f7578315081 - {\"text\":\"This is the edited comment\"}"}
+{"level":"info","message":"Tue Sep 10 2024 23:45:25 GMT+0530 (India Standard Time) - /api/comments/66e08b821d269f7578315081 - {\"text\":\"This is the edited comment\"}"}
+{"level":"info","message":"Tue Sep 10 2024 23:46:26 GMT+0530 (India Standard Time) - /api/comments/66e08b571d269f757831507e - {\"text\":\"This is the edited comment2\"}"}
+{"level":"info","message":"Tue Sep 10 2024 23:48:33 GMT+0530 (India Standard Time) - /api/comments/66e08b571d269f757831507e - {\"text\":\"This is the edited comment2\"}"}
+{"level":"info","message":"Tue Sep 10 2024 23:51:10 GMT+0530 (India Standard Time) - /api/comments/66e08b571d269f757831507e - {\"text\":\"This is the edited comment2\"}"}
+{"level":"info","message":"Tue Sep 10 2024 23:55:07 GMT+0530 (India Standard Time) - /api/comments/66e08b571d269f757831507e - {\"text\":\"This is the edited comment2\"}"}
+{"level":"info","message":"Tue Sep 10 2024 23:56:31 GMT+0530 (India Standard Time) - /api/comments/66e08b571d269f757831507e - {\"text\":\"This is the edited comment2\"}"}
+{"level":"info","message":"Tue Sep 10 2024 23:57:37 GMT+0530 (India Standard Time) - /api/comments/66e08b571d269f757831507e - {\"text\":\"This is the edited comment2\"}"}
+{"level":"info","message":"Tue Sep 10 2024 23:58:21 GMT+0530 (India Standard Time) - /api/comments/66e08b571d269f757831507e - {\"text\":\"This is the edited comment2\"}"}
+{"level":"info","message":"Wed Sep 11 2024 00:01:20 GMT+0530 (India Standard Time) - /api/comments/66e08b281d269f757831507c - {}"}
+{"level":"info","message":"Wed Sep 11 2024 00:01:41 GMT+0530 (India Standard Time) - /api/comments/66e08b9a1d269f7578315083 - {}"}
