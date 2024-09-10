@@ -5,7 +5,16 @@ const app = express();
 import { connectUsingMongoose } from './src/config/mongoose.js';
 import bodyParser from 'body-parser';
 import loggerMiddleware from './src/middlewares/logger.middleware.js';
+import cookieParser from "cookie-parser";
 
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+export const __filename = fileURLToPath(import.meta.url);
+export const __dirname = dirname(__filename);
+
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(loggerMiddleware);
 

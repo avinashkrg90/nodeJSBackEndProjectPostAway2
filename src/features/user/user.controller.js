@@ -1,8 +1,10 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import { customErrorHandler } from "../../middlewares/errorHandler.js";
-
+import path from 'path';
+import fs from 'fs';
 import UserRepository from "./user.repository.js";
+import { __dirname } from "../../../server.js";
 
 export default class UserController {
     constructor() {
@@ -51,7 +53,7 @@ export default class UserController {
     }
 
     getUserDetailById = async (req, res, next) => {
-        const {userId} = req.params;
+        const { userId } = req.params;
         const resp = await this.userRepository.getUserDetailById(userId);
         if (resp.success) {
             res.status(201).json({
@@ -78,8 +80,8 @@ export default class UserController {
     }
 
     updateUserDetails = async (req, res, next) => {
-        const {userId} = req.params;
-        const {name, age, gender, email} = req.body;
+        const { userId } = req.params;
+        const { name, age, gender, email } = req.body;
         const resp = await this.userRepository.updateUserDetails(userId, name, age, gender, email);
         if (resp.success) {
             res.status(201).json({
@@ -88,6 +90,42 @@ export default class UserController {
                 res: resp.res,
             });
         } else {
+            next(new customErrorHandler(resp.error.statusCode, resp.error.msg));
+        }
+    }
+
+    uploadAvatar = async (req, res, next) => {
+        const obj = {
+            name: req.body.name,
+            user: req._id,
+            img: {
+                data: fs.readFileSync(path.join(__dirname + '/uploads/avatars/' + req.file.filename)),
+                contentType: 'image/jpg'
+            }
+        }
+        console.log(obj);
+        const resp = await this.userRepository.uploadAvatar(obj);
+        if (resp.success) {
+            res.status(201).json({
+                success: true,
+                msg: "avatar uploaded",
+                res: resp.res,
+            });
+        } else {
+            next(new customErrorHandler(resp.error.statusCode, resp.error.msg));
+        }
+    }
+
+    fetchAvatar = async (req, res, next) => {
+        const {id} = req.params;
+        const resp = await this.userRepository.getAvatar(id);
+        if (resp.success){
+            res.status(201).json({
+                success: true,
+                msg: "found avatar",
+                res: resp.res,
+            })
+        } else{
             next(new customErrorHandler(resp.error.statusCode, resp.error.msg));
         }
     }

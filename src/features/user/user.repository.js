@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { compareHashedPassword, hashPassword } from "../../utils/hashPassword.js";
 
 import UserModel from "./user.schema.js";
+import UserAvatarModel from "./userAvatarSchema.js";
 
 export default class UserRepository {
 
@@ -98,6 +99,44 @@ export default class UserRepository {
                 user.email = email;
                 await user.save();
                 return { success: true, res: user };
+            }
+        } catch (error) {
+            return {
+                success: false,
+                error: { statusCode: 400, msg: error },
+            };
+        }
+    }
+
+    uploadAvatar = async (objectData) => {
+        try {
+            const status = await UserAvatarModel.create(objectData);
+            if (!status) {
+                return {
+                    success: false,
+                    error: { statusCode: 404, msg: "Avatar could not be uploaded" },
+                };
+            } else {
+                return { success: true, res: objectData };
+            }
+        } catch (error) {
+            return {
+                success: false,
+                error: { statusCode: 400, msg: error },
+            };
+        }
+    }
+
+    getAvatar = async (id) => {
+        try {
+            const avatar = await UserAvatarModel.findOne({user: id});
+            if (!avatar) {
+                return {
+                    success: false,
+                    error: { statusCode: 404, msg: "Avatar could not be found" },
+                };
+            } else {
+                return { success: true, res: avatar };
             }
         } catch (error) {
             return {
