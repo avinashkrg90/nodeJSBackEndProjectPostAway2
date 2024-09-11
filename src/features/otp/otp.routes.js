@@ -1,17 +1,20 @@
 import express from 'express'
+import OtpController from './otp.controller.js';
 
 const router = express.Router();
 
-router.post('/send', (req, res)=>{
-    res.send("send an otp for password reset")
+const otpController = new OtpController();
+
+router.post('/send', (req, res, next)=>{
+    otpController.sendOtp(req, res, next);
 })
 
-router.post('/verify', (req, res)=>{
-    res.send("verify an otp")
+router.post('/verify', (req, res, next)=>{
+    otpController.verifyOtp(req, res, next);
 })
 
-router.post('/reset-password', (req, res)=>{
-    res.send("reset the user password")
+router.post('/reset-password', (req, res, next) =>{
+    otpController.resetPassword(req, res, next);
 })
 
 export default router
