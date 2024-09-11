@@ -1,5 +1,6 @@
 import express from 'express'
 import OtpController from './otp.controller.js';
+import { auth } from '../../middlewares/jwtAuth.js';
 
 const router = express.Router();
 

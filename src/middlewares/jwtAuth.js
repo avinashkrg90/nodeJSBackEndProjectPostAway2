@@ -8,7 +8,7 @@ export const auth = async (req, res, next) => {
     } else {
       // console.log("data is", data);
       req._id = data._id;
-      req.user = data.user;
+      req.email = data.email;
       next();
     }
   });

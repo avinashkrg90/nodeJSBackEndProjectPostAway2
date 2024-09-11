@@ -3,7 +3,6 @@ import express from 'express'
 import UserController from './user.controller.js';
 import { auth } from '../../middlewares/jwtAuth.js';
 import { uploadAvatar } from '../../utils/fileUpload.js';
-import { rmSync } from 'fs';
 
 const userController = new UserController
 

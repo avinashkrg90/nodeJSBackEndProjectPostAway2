@@ -30,7 +30,7 @@ export default class UserController {
         const resp = await this.userRepository.userLogin(req.body);
         if (resp.success) {
             const token = jwt.sign(
-                { _id: resp.res._id, userName: resp.res.name },
+                { _id: resp.res._id, email: resp.res.email },
                 process.env.JWT_SECRET,
                 {
                     expiresIn: "1h",
@@ -129,19 +129,5 @@ export default class UserController {
             next(new customErrorHandler(resp.error.statusCode, resp.error.msg));
         }
     }
-
-    // updateUserPassword = async (req, res, next) => {
-    //     const { newPassword } = req.body;
-    //     const resp = await updateUserPasswordRepo(req._id, newPassword, next);
-    //     if (resp.success) {
-    //         res.status(201).json({
-    //             success: true,
-    //             msg: "password updated successfully",
-    //             res: resp.res,
-    //         });
-    //     } else {
-    //         next(new customErrorHandler(resp.error.statusCode, resp.error.msg));
-    //     }
-    // }
 
 }
