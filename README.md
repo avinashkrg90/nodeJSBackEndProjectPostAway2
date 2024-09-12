@@ -1,33 +1,43 @@
-
-API Structure
+This is a REST API application for serving social media application, where user can register themselves, login, and post. The post can be commented, liked. comments can be updated and deleted. posts can be liked or unliked. user can make friend requests to other users. friend requests couls be accepted or rejected. user can reset thier password using otp verification (otp being sent to email). Also, user can upload their avatar and change it if required/
+**API Structure**
 1. Feature - USER
-   APIs
+   APIs (route - /api/users)
    1. post - '/signup'
    2. post - '/signin'
-
-router.post('/logout', (req, res, next)=>{
-    userController.userLogout(req, res, next);
-})
-
-router.post('/logout-all-devices', (req, res, next)=>{
-    userController.userLogoutFromAllDevices(req, res, next);
-})
-
-router.get('/get-details/:userId', (req, res, next)=>{
-    userController.getUserDetailById(req, res, next);
-})
-
-router.get('/get-all-details', auth, (req, res, next)=>{
-    userController.getAllUserDetail(req, res, next);
-})
-
-router.put('/update-details/:userId', auth, (req, res, next)=>{
-    userController.updateUserDetails(req, res, next);
-})
-
-router.post('/avatar-upload', auth, uploadAvatar.single('image'), (req, res, next)=>{
-    userController.uploadAvatar(req, res, next);
-})
-
-router.get('/get-avatar/:id', auth, (req, res, next)=>{//userId
-    userController.fetchAvatar(req, res, next);
+   3. post - /logout'
+   4. post - '/logout-all-devices'
+   5. get - '/get-details/:userId'
+   6. get - '/get-all-details'
+   7. put - '/update-details/:userId'
+   8. post - '/avatar-upload'
+   9. get - '/get-avatar/:id'
+2. Feature - POST
+   APIs (route - /api/posts)
+   1. get - '/all'
+   2. get - '/:postId'
+   3. get - '/user/:userId'
+   4. post - '/'
+   5. delete - '/:postId'
+   6. put - '/:postId'
+3. Feature - COMMENT
+   APIs (route - /api/comments)
+   1. get - '/:postId'
+   2. post - '/:postId'
+   3. delete - '/:commentId'
+   4. put - '/:commentId'
+4. Feature - LIKE
+   APIs (route - /api/likes)
+   1. get - '/:id'
+   2. post - '/toggle/:id'
+5. Feature - FRIEND
+   APIs (route - /api/friends)
+   1. get - '/get-friends/:userId'
+   2. get - '/get-pending-requests'
+   3. post - '/toggle-friendship/:friendId'
+   4. post - '/response-to-request/:friendId'
+   5. post - '/send-friend-request/:friendId'
+6. Feature - OTP
+   APIs (route - /api/otp)
+   1. post - '/send'
+   2. post - '/verify'
+   3. post - '/reset-password'
