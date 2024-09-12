@@ -1,4 +1,5 @@
-This is a REST API application for serving social media application, where user can register themselves, login, and post. The post can be commented, liked. comments can be updated and deleted. posts can be liked or unliked. user can make friend requests to other users. friend requests couls be accepted or rejected. user can reset thier password using otp verification (otp being sent to email). Also, user can upload their avatar and change it if required/
+This is a REST API application for serving social media application, where user can register themselves, login, and post. The post can be commented, liked. comments can be updated and deleted. posts can be liked or unliked. user can make friend requests to other users. friend requests couls be accepted or rejected. user can reset thier password using otp verification (otp being sent to email). Also, user can upload their avatar and change it if required.
+
 **API Structure**
 1. Feature - USER
    APIs (route - /api/users)
